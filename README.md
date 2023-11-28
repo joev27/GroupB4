@@ -10,6 +10,6 @@
 ### :mechanic:ME
 * [3D Files](https://github.com/joev27/GroupB4/tree/main/3D%20Files)
 ### :electric_plug:EE
-* [Electrical Wiring]()
-* [HMI Program]()
-* [I/O Box]()
+* [Electrical Wiring](https://github.com/joev27/GroupB4/tree/main/Wiring%20Diagram)
+* [HMI Program](https://github.com/joev27/GroupB4/tree/main/Wiring%20Diagram)
+* [I/O Box](https://github.com/joev27/GroupB4/tree/main/Wiring%20Diagram)
