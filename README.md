@@ -7,5 +7,9 @@
 * [Stacking](https://github.com/joev27/GroupB4/blob/main/Stacking)
 
 ## Resources
+### ME
 * [3D Files](https://github.com/joev27/GroupB4/tree/main/3D%20Files)
+### EE
 * [Electrical Wiring]()
+* [HMI Program]()
+* [I/O Box]()
