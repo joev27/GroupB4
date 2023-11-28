@@ -7,5 +7,5 @@
 * [Stacking](https://github.com/joev27/GroupB4/blob/main/Stacking)
 
 
-* [3D Files] (https://github.com/joev27/GroupB4/tree/main/3D%20Files)
+* [3D Files](https://github.com/joev27/GroupB4/tree/main/3D%20Files)
 * 
