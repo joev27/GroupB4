@@ -8,4 +8,4 @@
 
 ## Resources
 * [3D Files](https://github.com/joev27/GroupB4/tree/main/3D%20Files)
-* [Electrical Wiring]  
+* [Electrical Wiring]()
