@@ -6,7 +6,7 @@
 ## :robot:Codes
 * [Pick and Place](https://github.com/joev27/GroupB4/blob/main/Pick%20and%20Place)
 * [Stacking](https://github.com/joev27/GroupB4/blob/main/Stacking)
-* [Task 3]
+* [Task 3](https://github.com/joev27/GroupB4/blob/main/Task%203)
 
 ## :file_folder:Resources
 ### :mechanic:ME
