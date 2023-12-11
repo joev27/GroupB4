@@ -1,0 +1,281 @@
+Integer Circ3, Sqrr3, i, Circ1, Sqrr1, h, ns, nc, traydif
+Function task3
+Motor On
+Power High
+Speed 30
+Accel 30, 30
+SpeedS 500
+AccelS 5000
+
+h = 6					'height of tokens
+ns = 6					'amount of rectangular tokens
+nc = 6					'amount of circular tokens
+traydif = 110			'distance between tray origins
+
+Tool 1
+Go Origen1
+		i = 0
+		Print (i)
+		
+	For Sqrr3 = 0 To 2 'step 1-9
+        FeedS1()
+
+		FixS1()
+
+		PlaceS3()
+
+	Next Sqrr3
+
+	For Circ3 = 0 To 2 'step 11-19
+		FeedC1()
+
+		FixC1()
+
+		PlaceC3()
+
+	Next Circ3
+
+	
+	For Sqrr1 = 0 To 2 'step 1-9
+		
+        FeedS1()
+
+		FixS1()
+
+		PlaceS1()
+
+	Next Sqrr1
+
+	For Circ1 = 0 To 2 'step 11-19
+		FeedC1()
+	
+		FixC1()
+	
+		PlaceC1()
+	
+	Next Circ1
+	
+	
+	
+	For Sqrr1 = 0 To 2
+		revsqr1()
+		revsqrf1() 'step 21-26 
+	Next Sqrr1
+	
+	For Circ1 = 0 To 2
+		revcirc1()
+		revcircf1() 'step 27-32
+	Next Circ1
+	
+	For Sqrr3 = 0 To 2
+		revsqr3()
+		revsqrf3() 'step 21-26 
+	Next Sqrr3
+	
+	For Circ3 = 0 To 2
+		revcirc3()
+		revcircf3() 'step 27-32
+	Next Circ3
+
+Go Origen1
+
+Fend
+
+Function PlaceC3
+    Go placecir30 -Z(20) +Y(Circ3 * 30) /1
+	Wait 0.5
+    Go placecir30 +Y(Circ3 * 30) /1
+	Off 8
+    Go placecir30 -Z(20) +Y(Circ3 * 30) /1
+Fend
+
+
+Function PlaceS3
+    Go placesqr30 -Z(20) +Y(Sqrr3 * 30) /1
+	Wait 0.5
+    Go placesqr30 +Y(Sqrr3 * 30) /1
+	Off 8
+	Go placesqr30 -Z(20) +Y(Sqrr3 * 30) /1
+Fend
+Function revsqr3
+    Go placesqr30 -Z(20) +Y(Sqrr3 * 30) /1
+	Wait 0.5
+    Go placesqr30 +Y(Sqrr3 * 30) /1
+	On 8
+    Go placesqr30 -Z(20) +Y(Sqrr3 * 30) /1
+	Wait 0.5
+	i = i + 1
+Fend
+Function revsqrf3
+	
+    Go FeedSqr -Z(50) /2
+	Wait 0.5
+    Go FeedSqr -Z(Sqrr3 * 6) /2
+	Off 8
+	Wait 0.2
+    Go FeedSqr -Z(15) -X(10) -Y(5) /2
+	Wait 0.5
+	i = i + 1
+Fend
+Function revcirc3
+    Go placecir30 -Z(20) +Y(Circ3 * 30) /1
+	Wait 0.5
+    Go placecir30 +Y(Circ3 * 30) /1
+	On 8
+    Go placecir30 -Z(20) +Y(Circ3 * 30) /1
+	Wait 0.5
+	i = i + 1
+	Print (i)
+Fend
+Function revcircf3
+	
+    Go FeedCir -Z(50) /2
+	Wait 0.5
+    Go FeedCir -Z(Circ3 * 6) /2
+	Off 8
+	Wait 0.2
+    Go FeedCir -Z(15) -X(10) /2
+	Wait 0.5
+	i = i + 1
+	Print (i)
+Fend
+Function FeedC1
+    Go FeedCir -Z(50) /2
+	Wait 0.5
+	Go FeedCir -Z((nc - Circ3 - Circ1 - 1) * h) /2
+	On 8
+	Wait 0.2
+    Go FeedCir -Z((nc - Circ3 - Circ1 - 1) * h + 15) -X(10) /2
+	Wait 0.5
+	
+	i = i + 1
+	Print (i)
+	
+Fend
+Function FixC1
+		
+    Go FixCir -Z(15) /2
+    Go FixCir -Z(5) -X(10) /2
+	Wait 0.5
+    Go FixCir +Z(3) -X(5) /2
+    Go FixCir +Z(3) +X(5) /2
+	Off 8
+	Wait 0.5
+    Go FixCir -Z(10) +X(5) /2
+	
+    Go FixCir -Z(10) /2
+    Go FixCir +Z(3) /2
+	On 8
+    Go FixCir -Z(20) /2
+    
+	i = i + 1
+	Print (i)
+    
+Fend
+Function PlaceC1
+    Go TrayOrigin -Z(20) +Y(Circ1 * 30) /2
+	Wait 0.5
+    Go TrayOrigin +Y(Circ1 * 30) /2
+	Off 8
+    Go TrayOrigin -Z(20) +Y(Circ1 * 30) /2
+
+	i = i + 1
+	Print (i)
+
+Fend
+Function FeedS1
+    Go FeedSqr -Z(50) /2
+	Wait 0.5
+    Go FeedSqr -Z((ns - Sqrr3 - Sqrr1 - 1) * h) /2
+	On 8
+	Wait 0.2
+    Go FeedSqr -Z((ns - Sqrr3 - Sqrr1 - 1) * h + 15) -X(10) -Y(5) /2
+	Wait 0.5
+
+	i = i + 1
+	Print (i)
+
+Fend
+Function FixS1
+		
+    Go FixSqr -Z(15) -Y(5) /2
+    Go FixSqr -Z(5) -X(10) -Y(5) /2
+	Wait 0.5
+    Go FixSqr -X(15) -Y(5) /2
+    Go FixSqr +X(5) +Y(5) /2
+	Off 8
+	Wait 0.5
+    Go FixSqr +X(5) +Y(5) -Z(10) /2
+	
+    Go FixSqr -Z(10) /2
+    Go FixSqr +Z(3) /2
+	On 8
+    Go FixSqr -Z(20) /2
+    
+	i = i + 1
+	Print (i)
+
+Fend
+Function PlaceS1
+
+    Go TrayOrigin -Z(20) +X(30) +Y(Sqrr1 * 30) /2
+	Wait 0.5
+    Go TrayOrigin +X(30) +Y(Sqrr1 * 30) /2
+	Off 8
+	Go TrayOrigin -Z(20) +X(30) +Y(Sqrr1 * 30) /2
+	
+	i = i + 1
+	Print (i)
+	
+Fend
+Function revsqr1
+
+    Go TrayOrigin -Z(20) +X(30) +Y(Sqrr1 * 30) /2
+	Wait 0.5
+    Go TrayOrigin +X(30) +Y(Sqrr1 * 30) /2
+	On 8
+    Go TrayOrigin -Z(20) +X(30) +Y(Sqrr1 * 30) /2
+	Wait 0.5
+
+	i = i + 1
+	Print (i)
+Fend
+Function revsqrf1
+    Go FeedSqr -Z(50) /2
+	Wait 0.5
+    Go FeedSqr -Z(Sqrr1 * h) /2
+	Off 8
+	Wait 0.2
+    Go FeedSqr -Z(15) -X(10) -Y(5) /2
+	Wait 0.5
+
+	i = i + 1
+	Print (i)
+
+Fend
+Function revcirc1
+
+    Go TrayOrigin -Z(20) +Y(Circ1 * 30) /2
+	Wait 0.1
+    Go TrayOrigin +Y(Circ1 * 30) /2
+	On 8
+    Go TrayOrigin -Z(20) +Y(Circ1 * 30) /2
+	Wait 0.1
+
+	i = i + 1
+	Print (i)
+Fend
+Function revcircf1
+	
+    Go FeedCir -Z(50) /2
+	Wait 0.1
+    Go FeedCir -Z(Circ1 * h) /2
+	Off 8
+	Wait 0.2
+    Go FeedCir -Z(15) -X(10) /2
+	Wait 0.1
+
+	i = i + 1
+	Print (i)
+
+Fend
