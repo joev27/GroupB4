@@ -2,9 +2,11 @@
 ## :joystick:Simulations
 * [Pick and Place](https://youtu.be/uCTWLBd3CHA)
 * [Stacking](https://youtu.be/nHVbiKW6cxQ)
+* [Task 3](https://youtu.be/GFuKxFXsvZo)
 ## :robot:Codes
 * [Pick and Place](https://github.com/joev27/GroupB4/blob/main/Pick%20and%20Place)
 * [Stacking](https://github.com/joev27/GroupB4/blob/main/Stacking)
+* [Task 3]
 
 ## :file_folder:Resources
 ### :mechanic:ME
