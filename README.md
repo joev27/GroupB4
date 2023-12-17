@@ -4,9 +4,9 @@
 * [Stacking](https://youtu.be/nHVbiKW6cxQ)
 * [Task 3](https://youtu.be/GFuKxFXsvZo)
 ## :robot:Codes
-* [Pick and Place](https://github.com/joev27/GroupB4/blob/main/Pick%20and%20Place)
-* [Stacking](https://github.com/joev27/GroupB4/blob/main/Stacking)
-* [Task 3](https://github.com/joev27/GroupB4/blob/main/Task%203)
+* [Pick and Place](https://github.com/joev27/GroupB4/blob/main/Codes/PickandPlace.prg)
+* [Stacking](https://github.com/joev27/GroupB4/blob/main/Codes/Stacking.prg)
+* [Task 3](https://github.com/joev27/GroupB4/blob/main/Codes/Task3.prg)
 
 ## :file_folder:Resources
 ### :mechanic:ME
